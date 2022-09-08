@@ -107,7 +107,7 @@ export function floatingLabel(x, y, z, inputMessage) {
  * @param {number} zScale
  * @param {object} boxTexture
  */
-export function wallSkillsSection(
+export function allSkillsSection(
   x,
   y,
   z,
