@@ -18,7 +18,7 @@ export function noWebGL() {
     preloadOpacity[i].style.display = "none";
   }
 
-  var warning = WEBGL.getWebGLErrorMessage();
+  var warning = WEBGL.getWebGLErrorMessage();d
   var a = document.createElement("a");
   var linkText = document.createTextNode("点击可以查看我的静态网站");
   a.appendChild(linkText);

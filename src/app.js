@@ -362,7 +362,7 @@ Ammo().then((Ammo) => {
     addRigidPhysics(linkBox, boxScale);
   }
 
-  // 'AirHua'
+  // 'TaiXin'
   function loadRyanText() {
     var text_loader = new THREE.FontLoader();
 
@@ -545,6 +545,7 @@ Ammo().then((Ammo) => {
 
     /* default texture loading */
     const loader = new THREE.TextureLoader(manager);
+    
     const billboardPole = new THREE.Mesh(
       new THREE.BoxBufferGeometry(
         billboardPoleScale.x,
@@ -660,7 +661,7 @@ Ammo().then((Ammo) => {
     addRigidPhysics(wall, wallScale);
   }
 
-  // 创建被被撞击的砖块墙
+  // 创建被撞击的砖块墙
   function wallOfBricks() {
     const loader = new THREE.TextureLoader(manager);
     var pos = new THREE.Vector3();
@@ -942,7 +943,8 @@ Ammo().then((Ammo) => {
     camera.updateProjectionMatrix();
 
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderFrame();
+    //防止 大小调整重复渲染卡顿问题
+    // renderFrame();
   }
 
   manager.onLoad = function () {
@@ -966,7 +968,7 @@ Ammo().then((Ammo) => {
   startButton.addEventListener("click", startButtonEventListener);
 
   // 开启很卡
-  // window.addEventListener('resize', onWindowResize);
+  window.addEventListener('resize', onWindowResize);
 
   if (isTouchscreenDevice()) {
     document.getElementById("appDirections").innerHTML =
@@ -1028,7 +1030,7 @@ Ammo().then((Ammo) => {
 
     // github
     createBox(
-      12,
+      11,
       2,
       -70,
       4,

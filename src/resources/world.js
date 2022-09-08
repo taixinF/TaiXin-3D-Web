@@ -1,9 +1,9 @@
 // 创建3d世界物体
 
-import * as THREE from 'three';
-import Stats from 'stats.js';
-import galaxyVertexShader from '../jsm/vertex.glsl';
-import galaxyFragmentShader from '../jsm/fragment.glsl';
+import * as THREE from "three";
+import Stats from "stats.js";
+import galaxyVertexShader from "../jsm/vertex.glsl";
+import galaxyFragmentShader from "../jsm/fragment.glsl";
 
 // 定义three.js 场景
 export let clock,
@@ -83,7 +83,7 @@ export function createWorld() {
 // 地图中的旋转粒子堆
 export function glowingParticles() {
   var particleTextureLoader = new THREE.TextureLoader(manager);
-  var particleTexture = particleTextureLoader.load('../src/jsm/spark.png');
+  var particleTexture = particleTextureLoader.load("../src/jsm/spark.png");
 
   particleGroup = new THREE.Object3D();
   particleGroup.position.x = -1;
@@ -186,8 +186,8 @@ export const generateGalaxy = () => {
   parameters.spin = 1;
 
   parameters.randomnessPower = 3;
-  parameters.insideColor = '#ff6030';
-  parameters.outsideColor = '#1b3984';
+  parameters.insideColor = "#ff6030";
+  parameters.outsideColor = "#1b3984";
   parameters.randomness = 0.2;
 
   let geometry = null;
@@ -235,9 +235,9 @@ export const generateGalaxy = () => {
       radius;
     const randomZ =
       Math.pow(Math.random(), parameters.randomnessPower) *
-      (Math.random() < 0.5 ? 1 : -1) *
-      parameters.randomness *
-      radius -
+        (Math.random() < 0.5 ? 1 : -1) *
+        parameters.randomness *
+        radius -
       50;
 
     positions[i3] = Math.cos(branchAngle) * radius;
@@ -260,12 +260,12 @@ export const generateGalaxy = () => {
     scales[i] = Math.random();
   }
 
-  geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-  geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
-  geometry.setAttribute('aScale', new THREE.BufferAttribute(scales, 1));
+  geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+  geometry.setAttribute("color", new THREE.BufferAttribute(colors, 3));
+  geometry.setAttribute("aScale", new THREE.BufferAttribute(scales, 1));
   // 扩散
   geometry.setAttribute(
-    'aRandomness',
+    "aRandomness",
     new THREE.BufferAttribute(randomness, 3)
   );
 
