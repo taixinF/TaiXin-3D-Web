@@ -294,6 +294,7 @@ export const generateGalaxy = () => {
   scene.add(galaxyPoints);
 };
 
+//天空小光点旋转
 export function moveParticles() {
   particleSystemObject.rotation.z += 0.0003;
   lensFlareObject.rotation.z += 0.0002;

@@ -100,6 +100,7 @@ Ammo().then((Ammo) => {
     physicsWorld.setGravity(new Ammo.btVector3(0, -50, 0));
   }
 
+  //创建地面网格几何
   function createGridPlane() {
     let pos = { x: 0, y: -0.25, z: 0 };
     let scale = { x: 175, y: 0.5, z: 175 };
@@ -110,14 +111,17 @@ Ammo().then((Ammo) => {
     grid.material.opacity = 0.5;
     grid.material.transparent = true;
     grid.position.y = 0.005;
-    scene.add(grid);
+
+    //地面网格状态
+    // scene.add(grid);
 
     let blockPlane = new THREE.Mesh(
-      new THREE.BoxBufferGeometry(),
+      new THREE.BoxBufferGeometry(), //不介意自己写一个三元组。
       new THREE.MeshPhongMaterial({
         color: 0xffffff,
         transparent: true,
         opacity: 0.25,
+        // wireframe: true, //透视银河
       })
     );
     blockPlane.position.set(pos.x, pos.y, pos.z);
@@ -341,7 +345,7 @@ Ammo().then((Ammo) => {
     cursorHoverObjects.push(linkBox);
   }
 
-  // 创建信息栏 (AirHua Life is loving)
+  // 创建信息栏 (TaiXin Life is loving)
   function Words(x, y, z) {
     const boxScale = { x: 25, y: 3, z: 2 };
     let quat = { x: 0, y: 0, z: 0, w: 1 };
@@ -369,7 +373,7 @@ Ammo().then((Ammo) => {
     text_loader.load("./src/jsm/Poppins_Regular.json", function (font) {
       var xMid, text;
 
-      var color = 0xfffc00;
+      var color = "skyblue";
 
       var textMaterials = [
         new THREE.MeshBasicMaterial({ color: color }), // front
@@ -413,7 +417,7 @@ Ammo().then((Ammo) => {
     text_loader.load("./src/jsm/Poppins_Regular.json", function (font) {
       var xMid, text;
 
-      var color = 0x00ff08;
+      var color = "skyblue";
 
       var textMaterials = [
         new THREE.MeshBasicMaterial({ color: color }), // front
@@ -545,7 +549,7 @@ Ammo().then((Ammo) => {
 
     /* default texture loading */
     const loader = new THREE.TextureLoader(manager);
-    
+
     const billboardPole = new THREE.Mesh(
       new THREE.BoxBufferGeometry(
         billboardPoleScale.x,
@@ -968,7 +972,7 @@ Ammo().then((Ammo) => {
   startButton.addEventListener("click", startButtonEventListener);
 
   // 开启很卡
-  window.addEventListener('resize', onWindowResize);
+  window.addEventListener("resize", onWindowResize);
 
   if (isTouchscreenDevice()) {
     document.getElementById("appDirections").innerHTML =
@@ -1074,8 +1078,8 @@ Ammo().then((Ammo) => {
     createBox(35, 2, -70, 4, 4, 1, boxTexture.QQ, URL.devTo, 0x000000, false);
 
     // 浮动文字
-    floatingLabel(11.875, 4.5, -70, "Github");
-    floatingLabel(19.125, 4.5, -70, "BiliBili");
+    floatingLabel(10.875, 4.5, -70, "Github");
+    floatingLabel(19, 4.5, -70, "BiliBili");
     floatingLabel(26.875, 4.5, -70, "Email");
     floatingLabel(35, 4.5, -70, "QQ");
 
