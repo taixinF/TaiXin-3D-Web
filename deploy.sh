@@ -14,11 +14,7 @@ git add -A
 git commit -m 'deploy'
 
 # 如果你想要部署到 https://USERNAME.github.io
-<<<<<<< HEAD
 git push -f git@github.com:taixinF main
-=======
-git push -f git@github.com:taixinF/TaiXin-3D-Web.github.io.git main
->>>>>>> ab2d11d6d493a15fab24c5dff4dbda6a81779396
 
 # 如果发布到 https://USERNAME.github.io/<REPO>  REPO=github上的项目
 # git push -f git@github.com:USERNAME/<REPO>.git master:gh-pages
