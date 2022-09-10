@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { WEBGL } from "./WebGL";
-import * as Ammo from "./libs/ammo";
+import * as Ammo from "../lib/ammo.js";
 // 导入材质
 import {
   billboardTextures,
