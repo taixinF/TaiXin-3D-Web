@@ -1,10 +1,10 @@
 let billboardTextures = {};
 // 第一块展板图片地址
-billboardTextures.blogTexture = "../src/jsm/blog.png";
+billboardTextures.blogTexture = "";
 // 第二块展板图片地址
-billboardTextures.musicTexture = "../src/jsm/music.png";
+billboardTextures.musicTexture = "";
 // 第三块展板图片地址
-billboardTextures.fundTexture = "../src/jsm/fund.png";
+billboardTextures.fundTexture = "";
 
 let boxTexture = {};
 // 链接的图标地址dw
@@ -40,7 +40,7 @@ SVG.reactLogo = "../src/jsm/react-svg.svg";
 
 // 链接的跳转地址
 let URL = {};
-URL.blog = "https://huabyte.com";
+URL.blog = "/pages/test.html";
 URL.ryanfloyd = "https://huabyte.com";
 URL.fund = "https://github.com/AirHua-byte/FundSpider";
 

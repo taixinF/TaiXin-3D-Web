@@ -996,35 +996,35 @@ Ammo().then((Ammo) => {
     createWallZ(0, 1.75, 87.5);
     createWallZ(0, 1.75, -87.5);
 
-    // // 第一块展板
-    // createBillboard(
-    //   -80,
-    //   2.5,
-    //   -70,
-    //   billboardTextures.blogTexture,
-    //   URL.blog,
-    //   Math.PI * 0.22
-    // );
+    // 第一块展板
+    createBillboard(
+      -80,
+      2.5,
+      -70,
+      billboardTextures.blogTexture,
+      URL.blog,
+      Math.PI * 0.22
+    );
 
-    // // 第二块展板
-    // createBillboard(
-    //   -45,
-    //   2.5,
-    //   -78,
-    //   billboardTextures.musicTexture,
-    //   URL.music,
-    //   Math.PI * 0.17
-    // );
+    // 第二块展板
+    createBillboard(
+      -45,
+      2.5,
+      -78,
+      billboardTextures.musicTexture,
+      URL.music,
+      Math.PI * 0.17
+    );
 
-    // // 第三块展板
-    // createBillboardRotated(
-    //   -17,
-    //   1.25,
-    //   -75,
-    //   billboardTextures.fundTexture,
-    //   URL.fund,
-    //   Math.PI * 0.15
-    // );
+    // 第三块展板
+    createBillboardRotated(
+      -17,
+      1.25,
+      -75,
+      billboardTextures.fundTexture,
+      URL.fund,
+      Math.PI * 0.15
+    );
 
     // Words(8, 1, -20);
     // // 提示文字
