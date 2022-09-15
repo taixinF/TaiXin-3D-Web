@@ -100,7 +100,7 @@ Ammo().then((Ammo) => {
     physicsWorld.setGravity(new Ammo.btVector3(0, -50, 0));
   }
 
-  //创建地面网格几何
+  //创建地面网格几何开始
   function createGridPlane() {
     let pos = { x: 0, y: -0.25, z: 0 };
     let scale = { x: 175, y: 0.5, z: 175 };
