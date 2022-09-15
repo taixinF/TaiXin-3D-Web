@@ -107,12 +107,12 @@ Ammo().then((Ammo) => {
     let quat = { x: 0, y: 0, z: 0, w: 1 };
     let mass = 0;
 
-    var grid = new THREE.GridHelper(175, 20, 0xffffff, 0xffffff);
-    grid.material.opacity = 0.5;
-    grid.material.transparent = true;
-    grid.position.y = 0.005;
+    // var grid = new THREE.GridHelper(175, 20, 0xffffff, 0xffffff);
+    // grid.material.opacity = 0.5;
+    // grid.material.transparent = true;
+    // grid.position.y = 0.005;
 
-    //地面网格状态
+    // 地面网格状态
     // scene.add(grid);
 
     let blockPlane = new THREE.Mesh(
@@ -155,7 +155,7 @@ Ammo().then((Ammo) => {
     body.setFriction(10);
     body.setRollingFriction(10);
 
-    // add to world
+    // add to world 物理加入
     physicsWorld.addRigidBody(body);
   }
 
@@ -641,7 +641,7 @@ Ammo().then((Ammo) => {
     addRigidPhysics(wall, wallScale);
   }
 
-  // 创建x轴边界
+  // 创建z轴边界
   function createWallZ(x, y, z) {
     const wallScale = { x: 175, y: 4, z: 0.125 };
 
@@ -804,6 +804,7 @@ Ammo().then((Ammo) => {
     scene.add(mesh);
   }
 
+  //墙面物理
   function addRigidPhysics(item, itemScale) {
     let pos = { x: item.position.x, y: item.position.y, z: item.position.z };
     let scale = { x: itemScale.x, y: itemScale.y, z: itemScale.z };
@@ -971,7 +972,6 @@ Ammo().then((Ammo) => {
 
   startButton.addEventListener("click", startButtonEventListener);
 
-  // 开启很卡
   window.addEventListener("resize", onWindowResize);
 
   if (isTouchscreenDevice()) {
@@ -1107,7 +1107,7 @@ Ammo().then((Ammo) => {
 
     // 板块文字
     simpleText(-50, 0.01, -5, "SKILLS", 3);
-    simpleText(-42, 0.01, -30, "WORKS", 3);
+    simpleText(-42, 0.01, -30, "NONE", 3);
     simpleText(61, 0.01, -15, "WISHES", 3);
 
     wallOfBricks();
