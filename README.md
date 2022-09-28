@@ -2,12 +2,6 @@
 
 最终效果：[taixinf.github.io](taixinf.github.io)
 
-<video autoplay src="https://assets.huabyte.com/blog/image/Tab-1645529042263.webm"></video>
-
-3d 网站也是根据国外大佬改的，这里先放大佬源码地址：[https://github.com/0xFloyd/Portfolio_2020](https://github.com/0xFloyd/Portfolio_2020)
-
-
-
 可以把这个`shell`脚本放到项目目录中，新建`deploy.sh`,将仓库 git 地址修改成你自己的
 
 ```shell
