@@ -1055,7 +1055,7 @@ Ammo().then((Ammo) => {
       4,
       1,
       boxTexture.BiliBili,
-      URL.BiliBili,
+      '',
       0x000000,
       false
     );
