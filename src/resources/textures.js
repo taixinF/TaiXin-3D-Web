@@ -45,7 +45,7 @@ URL.ryanfloyd = "https://huabyte.com";
 URL.fund = "https://github.com/AirHua-byte/FundSpider";
 
 URL.gitHub = "https://github.com/taixinF";
-URL.BiliBili = "https://space.bilibili.com/450443708";
+URL.BiliBili = "";
 URL.email = "https://yclzbb1349458861@163.com";
 URL.music = "https://music.huabyte.com";
 URL.devTo =
